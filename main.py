@@ -252,7 +252,7 @@ def calcSpeed(joyAxis, joyRead1, joyRead2, mapPoint1, mapPoint2):
 
 #Send data into web packets to flask server through get request
 def send(PARAMS, subPath="joy"):
-    r = requests.get(url = "http://127.0.0.1:5000/"+subPath, params = PARAMS)
+    r = requests.get(url = "http://127.0.0.1:5000/"+subPath, params = {'joystick':PARAMS})
     
 
 if __name__ == '__main__':
